@@ -1,0 +1,146 @@
+.header {
+  padding: 20px;
+  background-color: #88abd5;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.body {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.search {
+  margin: 10px 0px;
+  padding: 4px;
+  background-color: #f4f5f9;
+  border-radius: 8px;
+}
+
+.sarchIcon {
+  height: 16px;
+}
+
+.filter {
+  justify-content: center;
+  border: none;
+  background-color: #f4f5f9;
+  width: 320px;
+}
+
+.notes {
+  width: 500px;
+  border-radius: 8px;
+  padding: 8px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.notettl {
+  color: #f08cc8;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+img {
+  height: 20px;
+  cursor: pointer;
+}
+
+.notes .deletebtn img {
+  visibility: hidden;
+}
+
+.notes:hover .deletebtn img {
+  visibility: visible;
+}
+
+.deletebtn {
+  display: flex;
+  justify-content: end;
+}
+
+.add-container {
+  width: 100vw;
+  display: flex;
+}
+
+.add {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: 320px;
+  background-color: #f08cc8;
+  border: none;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translateX(-50%);
+  width: 360px;
+  border: 1px solid #88abd5;
+  background-color: white;
+  box-shadow: 0px 2px 7px 2px #f08cc8;
+  padding: 14px 40px 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.ttl {
+  text-align: center;
+  padding: 12px 0px 16px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+label {
+  margin: 16px 0px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+textarea {
+  height: 160px;
+}
+
+.btns {
+  display: flex;
+  justify-content: end;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+button {
+  border: 1px double #f08cc8;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.notes-container {
+  display: flex;
+  gap: 20px;
+}
+.notes {
+  border: 1px double #f08cc8;
+  box-shadow: 0px 2px 7px 2px #88abd5;
+}

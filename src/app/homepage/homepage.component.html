@@ -1,0 +1,61 @@
+<div class="header">
+  <div class="title">Note Mate</div>
+</div>
+
+<div class="body">
+  <div class="search">
+    <input
+      class="sarchIcon"
+      type="image"
+      src="https://cdn-icons-png.flaticon.com/512/8915/8915520.png"
+      alt="Search"
+    />
+    <input class="filter" type="search" name="search" placeholder="Filter" [(ngModel)]="search" (ngModelChange)="change()"/>
+  </div>
+
+  <div class="notes-container" *ngFor="let note of notes">
+    <div class="notes" (click)="editOnClick(note)">
+      <div class="deletebtn">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/463/463323.png"
+          (click)="removeOnClick($event, note.id)"
+        />
+      </div>
+      <div class="notettl">{{ note.title }}</div>
+      <div>{{ note.body }}</div>
+    </div>
+  </div>
+  <button class="add" type="button" (click)="openDialog()">+ Add</button>
+</div>
+
+<form #popup="ngForm">
+  <div class="container" *ngIf="noteDialogVisibility">
+    <div class="inputs">
+      <div class="ttl">Add Your Note</div>
+      <label>Title</label>
+      <input
+        name="title"
+        placeholder="title"
+        [(ngModel)]="addNote.title"
+        [required]="true"
+      />
+      <label> Body</label>
+      <textarea
+        name="body"
+        placeholder="Body"
+        [(ngModel)]="addNote.body"
+        [required]="true"
+      ></textarea>
+      <div class="btns">
+        <button type="button" (click)="closeDialog()">Close</button>
+        <button
+          type="button"
+          (click)="saveOnClick()"
+          [disabled]="popup.invalid"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
